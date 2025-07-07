@@ -1,10 +1,12 @@
 # 🌦️🧘 LucidPanel – Météo & Focus Dashboard en Liquid Glass
 
-**LucidPanel** est un tableau de bord minimaliste conçu avec Vue 3. Il combine la météo en temps réel, un timer Pomodoro fluide, des sons d’ambiance relaxants et des citations inspirantes — le tout dans un style visuel **"liquid glass"** inspiré des interfaces Apple (macOS Sonoma / iOS).
+**LucidPanel** est un tableau de bord minimaliste conçu avec Vue 3.
+Il combine la météo en temps réel, un timer Pomodoro fluide, des sons d’ambiance relaxants et des citations inspirantes.
+Le tout est présenté dans un style visuel **"liquid glass"** inspiré des interfaces Apple (macOS Sonoma / iOS).
 
 ## 🧪 Objectif
-
-Créer une application web élégante pour accompagner des sessions de travail ou de détente, en combinant des données en direct (météo), un timer interactif et un habillage sonore doux — avec un focus sur le design et l’expérience utilisateur.
+Créer une application web élégante pour accompagner des sessions de travail ou de détente.
+L'application combine des données en direct (météo), un timer interactif et un habillage sonore doux tout en mettant l’accent sur le design et l’expérience utilisateur.
 
 ---
 
@@ -21,31 +23,32 @@ Créer une application web élégante pour accompagner des sessions de travail o
 
 ## 🧱 Structure du projet
 
+```
 lucid-panel/
 ├─ public/
-│ └─ ambient/ # sons (ogg/mp3)
+│  └─ ambient/         # sons (ogg/mp3)
 ├─ src/
-│ ├─ assets/
-│ ├─ components/
-│ │ ├─ WeatherPanel.vue
-│ │ ├─ PomodoroTimer.vue
-│ │ ├─ AmbientPlayer.vue
-│ │ ├─ QuoteBox.vue
-│ │ └─ GlassCard.vue
-│ ├─ utils/
-│ │ └─ weatherAPI.ts
-│ ├─ App.vue
-│ └─ main.ts
+│  ├─ assets/
+│  ├─ components/
+│  │  ├─ WeatherPanel.vue
+│  │  ├─ PomodoroTimer.vue
+│  │  ├─ AmbientPlayer.vue
+│  │  ├─ QuoteBox.vue
+│  │  └─ GlassCard.vue
+│  ├─ utils/
+│  │  └─ weatherAPI.ts
+│  ├─ App.vue
+│  └─ main.ts
 ├─ index.html
 └─ vite.config.ts
-
+```
 
 ---
 
 ## 🧩 Composants à implémenter
 
 ### `GlassCard.vue`
-Composant de base stylisé façon "liquid glass", utilisé pour contenir les autres widgets.
+Composant de base stylisé façon *liquid glass*, utilisé pour contenir les autres widgets.
 
 ### `WeatherPanel.vue`
 Affiche :
@@ -79,8 +82,8 @@ Citation inspirante toutes les X minutes :
 Utilise des éléments visuels :
 - `backdrop-filter: blur(...)`
 - `rgba` semi-transparents
-- bordures douces, coins arrondis, ombres légères
-- transitions CSS douces
+- Bordures douces, coins arrondis, ombres légères
+- Transitions CSS douces
 
 Exemple de style :
 
@@ -93,43 +96,31 @@ Exemple de style :
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
 }
+```
 
-🔧 Fonctionnalités bonus possibles
+### 🔧 Fonctionnalités bonus possibles
+- Mode clair/sombre
+- "Zen mode" qui masque tout sauf le timer
+- Préférences utilisateur en localStorage
+- Drag-and-drop pour réorganiser les modules
 
-    Mode clair/sombre
-
-    "Zen mode" qui masque tout sauf le timer
-
-    Préférences utilisateur en localStorage
-
-    Drag-and-drop pour réorganiser les modules
-
-
-🚀 Lancer le projet
-
+### 🚀 Lancer le projet
+```bash
 npm install
 npm run dev
+```
 
-📌 À coder en priorité
+### 📌 À coder en priorité
+- `GlassCard.vue` : composant générique de style
+- `WeatherPanel.vue` : intégrer une API météo simple
+- `PomodoroTimer.vue` : logique de timer et animation
+- `AmbientPlayer.vue` : lecture audio de fichiers locaux
+- `QuoteBox.vue` : système de rotation de citations
 
-    GlassCard.vue : composant générique de style
-
-    WeatherPanel.vue : intégrer une API météo simple
-
-    PomodoroTimer.vue : logique de timer et animation
-
-    AmbientPlayer.vue : lecture audio de fichiers locaux
-
-    QuoteBox.vue : système de rotation de citations
-
-✅ But final
-
+## ✅ But final
 Avoir un tableau de bord tout-en-un, fluide, apaisant et élégant, utilisable en full screen comme interface de concentration ou de relaxation.
-🧠 Inspirations
 
-    Interfaces Apple (macOS Ventura / Sonoma)
-
-    Craft.do / Notion / Transparent UI trends
-
-    Ambiances de FocusRoom, RainyMood, Calm
-
+### 🧠 Inspirations
+- Interfaces Apple (macOS Ventura / Sonoma)
+- Craft.do / Notion / Transparent UI trends
+- Ambiances de FocusRoom, RainyMood, Calm
